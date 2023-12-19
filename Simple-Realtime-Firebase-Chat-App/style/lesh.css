@@ -1,31 +1,109 @@
+
+*{
+  outline: none;
+}
+*::-webkit-scrollbar{
+  width: 0px;
+  scroll-behavior: smooth;
+}
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  #chat-container {
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  #chat-messages {
-    max-height: 300px;
-    overflow-y: scroll;
-    margin-bottom: 10px;
-  }
-  
-  textarea {
-    width: calc(100% - 20px);
-    padding: 10px;
-    margin-bottom: 10px;
-  }
-  
-  button {
-    padding: 10px;
-    cursor: pointer;
-  }
-  
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+#chat-container {
+
+  width: 100%;
+  height: 100%;
+  background: yellow;
+ 
+}
+
+#chat-messages {
+  position: fixed;
+  width: 70%;
+  height: 80%;
+  background:none;
+  display: flex; 
+  margin: 20px;
+  background: rgba(255, 255, 255, 0.329);
+  border-radius: 10px;
+  justify-content: center;
+  flex-direction: column;
+  overflow: auto;
+}
+
+button {
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  color: white;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.205);
+  display: none;
+}
+input{
+  display: block;
+}
+#audio-input, #image-input{
+  display:none;
+}
+
+
+
+#chat-container{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #00796a;
+  display: flex;
+  justify-content: center;
+}
+
+
+.type{
+  position: fixed;
+  width: 60%;
+  height: 5%;
+  display: flex;
+  background: #085047;
+  bottom: 0;
+  transform: translateY(-50px);
+  padding: 3px;
+  border-radius: 8px;
+}
+input{
+  width: 100%;
+  border: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: lighter;
+  background:  #085047;
+  margin-left: 9px;
+  color: white;
+}
+
+img{
+  width: 90px;
+  height: 90px;
+  position: fixed;
+  transform: translateY(200px);
+  opacity: 0.9;
+}
+p{
+  color: rgb(255, 255, 255);
+  background:rgb(0, 32, 61);
+  height:fit-content;
+  width:200px;
+  margin:9px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border-radius: 20px;
+  padding: 12px;
+  font-weight: lighter;
+  animation: lesh 0.1s linear;
+}
+@keyframes lesh {
+0%{transform: translateX(500px);}
+
+100%{transform:translateX(0px);}
+}

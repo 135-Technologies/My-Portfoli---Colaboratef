@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style/lesh.css">
-  <meta name="description"
-    content="A simple Realtime Web based chat app working withh the firebase realtime database working with simple HTML CSS and Javascript Code" />
-  <title>Nale</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Real-time Chat with Audio Notes</title>
+  <link rel="stylesheet" href="lesh.css">
 </head>
-
 <body>
   <div id="chat-container">
     <div id="chat-messages"></div>
-    <input type="text" class="message input" />
-    <button onclick="sendMessage()">Send</button>
+   <div class="type">
+    <input type="text" id="message-input" placeholder="Write Something ......">
+    <input type="file" id="audio-input" accept="audio/*">
+    <input type="file" id="image-input" accept="image/*">
+    <button onclick="sendMessage()" id="lesh">Send</button>
+   </div>
   </div>
-  <script src="scripts/lesh.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-database.js"></script>
+  <script src="lesh.js"></script>
+  
 </body>
 </html>
